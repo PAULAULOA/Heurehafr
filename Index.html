@@ -41,11 +41,15 @@
             const days = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
             const day = days[now.getDay()];
 
-            // Format de date français
-            const date = now.getDate() + '/' + (now.getMonth() + 1) + '/' + now.getFullYear();
+            // Mois en français
+            const months = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
+            const month = months[now.getMonth()];
+
+            // Format de date : "JOUR, DATE MOIS ANNÉE"
+            const date = `${day}, ${now.getDate()} ${month} ${now.getFullYear()}`;
 
             document.getElementById('clock').textContent = hours + ':' + minutes;
-            document.getElementById('date').textContent = day + ' ' + date;
+            document.getElementById('date').textContent = date;
         }
 
         // Mettre à jour l'heure immédiatement et toutes les minutes
