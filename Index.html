@@ -46,7 +46,7 @@
             const month = months[now.getMonth()];
 
             // Format de date : "JOUR, DATE MOIS ANNÉE"
-            const date = `${day}, ${now.getDate()} ${month} ${now.getFullYear()}`;
+            const date = `${day} ${now.getDate()} ${month} ${now.getFullYear()}`;
 
             document.getElementById('clock').textContent = hours + ':' + minutes;
             document.getElementById('date').textContent = date;
